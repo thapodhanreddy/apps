@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>HTML Table Pagination Example</title>
+
+    <meta name="author" content="FrontendScript" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!--Only for demo purpose - no need to add.-->
+    <link rel="stylesheet" href="demo.css" />
+    <script src=
+    "//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+    </script>
+   
+	 
+        <style type="text/css">
+            table{
+                background: #fff;
+            }
+.paging-nav {
+  text-align: right;
+  padding-top: 2px;
+}
+
+.paging-nav a {
+  margin: auto 1px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1px 7px;
+  background: #91b9e6;
+  color: white;
+  border-radius: 3px;
+}
+
+.paging-nav .selected-page {
+  background: #187ed5;
+  font-weight: bold;
+}
+
+.paging-nav,
+#tableData {
+  width: 400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+            
+<table style="width: 100%;margin: 0px 0px 0px 10px;" id="tableData" class="table table-bordered table-striped">
+          <thead>
+    <tr>
+      <th>SNO</th>
+      <th>Class</th> 
+      <th>Subject</th>
+      <th>Chapters Name</th>
+      <th>MCQ</th>
+      <th colspan="4" style="text-align: center">ACTION</th>
+            </tr>
+  </thead>
+          <tbody>
+    <tr>
+              <td>1</td>
+              <td>Kindergarten</td>
+              <td>General Knowledge</td>
+              <td>Alphabets</td>
+              <td>MCQ</td>
+              <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+              <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+              <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+              <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+            </tr>
+    <tr>
+      <td>2</td>
+      <td>Kindergarten</td>
+      <td>General Knowledge</td>
+      <td>Alphabets</td>
+      <td>MCQ</td>
+      <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+      <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+      <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+      <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+              
+            </tr>
+    <tr>
+      <td>3</td>
+      <td>Kindergarten</td>
+      <td>General Knowledge</td>
+      <td>Alphabets</td>
+      <td>MCQ</td>
+      <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+      <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+      <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+      <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+            </tr>
+    <tr>
+      <td>4</td>
+      <td>Kindergarten</td>
+      <td>General Knowledge</td>
+      <td>Alphabets</td>
+      <td>MCQ</td>
+      <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+      <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+      <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+      <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+            </tr>
+    <tr>
+      <td>5</td>
+      <td>Kindergarten</td>
+      <td>General Knowledge</td>
+      <td>Alphabets</td>
+      <td>MCQ</td>
+      <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+      <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+      <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+      <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+            </tr>
+    <tr>
+      <td>6</td>
+      <td>Kindergarten</td>
+      <td>General Knowledge</td>
+      <td>Alphabets</td>
+      <td>MCQ</td>
+      <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+      <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+      <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+      <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+            </tr>
+    <tr>
+      <td>7</td>
+      <td>Kindergarten</td>
+      <td>General Knowledge</td>
+      <td>Alphabets</td>
+      <td>MCQ</td>
+      <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+      <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+      <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+      <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+            </tr>
+    <tr>
+      <td>8</td>
+      <td>Kindergarten</td>
+      <td>General Knowledge</td>
+      <td>Alphabets</td>
+      <td>MCQ</td>
+      <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+      <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+      <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+      <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+            </tr>
+    <tr>
+      <td>9</td>
+      <td>Kindergarten</td>
+      <td>General Knowledge</td>
+      <td>Alphabets</td>
+      <td>MCQ</td>
+      <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+      <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+      <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+      <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+            </tr>
+    <tr>
+      <td>10</td>
+      <td>Kindergarten</td>
+      <td>General Knowledge</td>
+      <td>Alphabets</td>
+      <td>MCQ</td>
+      <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+      <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+      <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+      <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+            </tr>
+    <tr>
+      <td>11</td>
+      <td>Kindergarten</td>
+      <td>General Knowledge</td>
+      <td>Alphabets</td>
+      <td>MCQ</td>
+      <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+      <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+      <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+      <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+            </tr>
+    <tr>
+      <td>12</td>
+      <td>Kindergarten</td>
+      <td>General Knowledge</td>
+      <td>Alphabets</td>
+      <td>MCQ</td>
+      <td><a href="/admin/code/View.html" style="text-decoration: none;">VIEW</a></td>
+      <td><a href="/#" style="text-decoration: none;">DELETE</a></td>
+      <td><a href="#" style="text-decoration: none;">EDIT</a></td>
+      <td><a href="/formpage.html" style="text-decoration: none;">ADD</a></td>
+            </tr>
+  </tbody>
+  
+        </table>
+        <button id="export" style="margin: 10px;" id="export" >EXPORT</button>
+         
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="paging.js"></script> 
+<script >
+  $(document).ready(function() {
+                $('#tableData').paging({limit:10});
+            });
+  </script>
+   <script src=
+   "//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js">
+   </script>
+  <script>
+    var button = document.getElementById('export');
+    button.addEventListener('click',()=>{
+        $(document).ready(function () {
+$("#tableData").table2excel({
+    filename: "Students.xls"
+});
+    });
+    })
+    
+  
+</script>
+	</body>
+</html>
